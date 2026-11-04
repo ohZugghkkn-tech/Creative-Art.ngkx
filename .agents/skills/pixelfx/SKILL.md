@@ -18,7 +18,7 @@ make good ones.
 
 ## Project-specific setup for any coding agent
 
-The upstream checkout is `sources/pixelfx` at the repository root. Run all commands below from that directory; no Claude-specific plugin is needed. The checkout is a Git submodule: changes inside it are not saved by the parent repository. For new or edited effects, work in a separate writable copy and place final deliverables outside `sources/`, or explicitly coordinate an upstream contribution. See the root README for setup and third-party rights.
+PixelFX is included directly in `sources/pixelfx` at the repository root. Run the commands below from that directory; no Claude-specific plugin is needed. Changes to tracked files are part of this project. Rendered files in `records/` may be ignored; put deliverables in a tracked location. See the root README for source information and archive extraction.
 
 ## Before anything
 
