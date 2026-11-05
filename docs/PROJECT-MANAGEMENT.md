@@ -1,55 +1,27 @@
-# Projektleitung mit KI-Unterstützung
+# Projektleitung
 
-Dieses Dokument legt fest, wie das Projekt in GitHub mit möglichst wenig organisatorischem Aufwand für den Repository-Eigentümer gesteuert wird.
+Das aktive Ziel ist eine saubere HeartGold-Code-Arbeitsbasis. Prioritäten und verifizierte Fakten stehen in `docs/PROJECT-STATUS.md` und `docs/HEARTGOLD-CODE-REBUILD.md`.
 
-## Verantwortlichkeiten
+## Arbeitsablauf
 
-### Projektleitung / KI
+1. Repository, Branch, Dateien, Submodule und Belege sichten.
+2. Ergebnis, Abnahmekriterien, Rechtefragen und Risiken abgrenzen.
+3. Textdateien auf einem Arbeitsbranch ändern; externe Submodule nur in berechtigten Forks/Kopien bearbeiten.
+4. Verfügbare Prüfungen ausführen; nicht verfügbare lokale Builds/Emulatorläufe als offen melden.
+5. Status und Nachweise aktualisieren.
+6. Branch, Dateien, Commit, Prüfungen und konkrete Blocker berichten.
 
-- Repository, Dokumentation, offene Aufgaben und Änderungen anhand verfügbarer GitHub-Inhalte prüfen.
-- Arbeit in kleine, priorisierte und überprüfbare Pakete teilen.
-- Fortschritt, Abhängigkeiten, Risiken und Blocker in Statusdokumentation und Issues nachhalten.
-- Dokumentation, Inventare, Checklisten, Skripte und andere textbasierte Projektdateien direkt auf einem Arbeitsbranch bearbeiten.
-- Änderungen vor dem Commit auf Konsistenz mit Ziel, Quellenlage und vereinbarten Schutzregeln prüfen.
-- Keine Tests, Builds, ROM-Sichtungen, Videosichtungen oder visuellen Ergebnisse behaupten, die tatsächlich nicht ausgeführt bzw. zugänglich waren.
-- Nach Arbeit den Branch, Commit und die noch nötigen Entscheidungen/Inputs knapp berichten.
+## Projektprioritäten
 
-### Repository-Eigentümer
+- **P0:** Unnötige Altdateien, Archive und Referenz-Gitlinks aus dem aktuellen Tree entfernen; Upload-Herkunft/Rechte/Zweck klären. Die bekannte ZIP-Vorschau ist eine Fehlermeldung, das BIN-Format unbekannt.
+- **P1:** HeartGold-Referenzcode, Nutzungsbedingungen und reproduzierbaren Build prüfen.
+- **P2:** Einen repräsentativen visuellen Fall mit PixelFX-Code-Prototyp und separater HeartGold-Portierung bearbeiten.
+- **P3:** HeartGold-Inventar, Regression, Patch-Basis und Dokumentation ausbauen.
 
-Der Eigentümer muss keine Aufgaben selbst zerlegen oder regelmäßig Projektstatusberichte schreiben. Benötigt werden nur Dinge, die die KI ohne Zugriff nicht beschaffen oder sicher entscheiden kann, zum Beispiel:
+## PixelFX-Arbeitsregel
 
-- nötige Quelldateien, eigene Assets oder ausdrücklich freigegebene Uploads;
-- eine Entscheidung, wenn mehrere legitime Projektziele oder Rechtefragen bestehen;
-- ein lokaler Testlauf, wenn dafür nur die eigene ROM, Hardware, Emulatorumgebung oder ein nicht zugänglicher Build benötigt wird;
-- Freigabe, bevor eine riskante oder nicht umkehrbare Änderung vorgenommen wird.
+Zuerst Module suchen, Kandidaten rendern und Frames beurteilen. Neue Effekte als Code iterieren und mit PixelFX-Werkzeugen prüfen. Für HeartGold sind DS-Portierung, Anpassung an die Spielressourcen, Integration und Spieltest eigenständige Schritte. Vorschau ist kein Integrationsnachweis.
 
-## Arbeitsablauf pro Aufgabe
+## Grenzen
 
-1. **Sichten:** Relevante Repository-Dateien, aktuelle Branches, Issues, Submodule und vorhandene Belege prüfen.
-2. **Abgrenzen:** Ergebnis und Akzeptanzkriterien festhalten; Abhängigkeiten und Risiken benennen.
-3. **Umsetzen:** Änderungen auf einem Arbeitsbranch durchführen. Keine Änderungen an geschützten/veröffentlichten Spieldaten oder fremden Submodules ohne klare Berechtigung und Ziel.
-4. **Prüfen:** Verfügbare statische Prüfungen ausführen. Nicht ausführbare Prüfungen als offen oder blockiert markieren.
-5. **Dokumentieren:** Geänderte Dateien, Teststatus, Nachweise und nächste Schritte aktualisieren.
-6. **Berichten:** Kurz zusammenfassen, was fertig ist, was offen ist und ob nur eine konkrete Entscheidung oder Datei des Eigentümers benötigt wird.
-
-## Prioritäten
-
-- **P0 – Sicherheit und Arbeitsgrundlage:** Rechte, Herkunft, versehentlich versionierte Spieldaten, reproduzierbarer Quellstand.
-- **P1 – Messbarkeit:** Inventare, Statusschema, Nachweisstruktur und reproduzierbare Testanleitung.
-- **P2 – Repräsentativer Durchlauf:** Einen kleinen Fall vollständig von Zuordnung bis Testprotokoll bearbeiten.
-- **P3 – Skalierung:** Restliche Moves und Assets anhand belegter Prioritäten prüfen und verbessern.
-- **P4 – Abnahme und Pflege:** Regression, Changelog, Patch-Basis und Dokumentation.
-
-## Grenzen und Verifikation
-
-GitHub-Dateien und Text können direkt ausgewertet und geändert werden. Eine GitHub-Verbindung führt jedoch nicht automatisch lokale Shell-Befehle, einen GBA-Build, Emulator-/Hardwaretests oder eine vollständige Video-/ROM-Sichtung aus. Dafür müssen zugängliche Testdaten, Ausgaben, Screenshots/Frames oder ein lokaler Test durch den Eigentümer bereitgestellt werden. Jede solche Grenze wird als konkreter Blocker dokumentiert, nicht als erledigtes Ergebnis dargestellt.
-
-## Statusbericht-Vorlage
-
-- **Phase / Priorität:**
-- **Erledigt:**
-- **Geänderte Dateien / Branch / Commit:**
-- **Prüfungen und Ergebnisse:**
-- **Offen oder blockiert:**
-- **Benötigt vom Eigentümer:** Nur konkrete, nicht delegierbare Eingabe nennen; andernfalls „nichts“.
-- **Nächster Schritt:**
+GitHub-Zugriff allein führt keine lokalen Shell-Befehle, Builds oder Emulator-/Hardwaretests aus. Keine vollständigen kommerziellen ROMs/Saves committieren, unbekannte Binärdateien nicht ausführen und keine Tests behaupten, die nicht tatsächlich durchgeführt wurden. Ignore-Regeln entfernen keine getrackten Dateien. Eine echte Entfernung aus dem Tree und insbesondere aus der Historie benötigt Git-Entfernungen; History-Rewrite erfordert Backup und Abstimmung.

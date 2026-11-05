@@ -1,13 +1,13 @@
 # Assets
 
-Hier nur eigene oder nachweislich zur Weitergabe freigegebene Grafik-Quellen, Arbeitsdateien und zulässige Patches ablegen. Zu jeder Datei Herkunft, Lizenz/Rechte, Basisversion und Verwendungszweck in der zugehörigen Dokumentation notieren.
+Nur eigene oder nachweislich freigegebene Arbeitsdateien ablegen. Herkunft, Lizenz/Rechte, Basisversion und Verwendungszweck dokumentieren.
 
-**Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Die bereits im Repository vorhandenen ZIP-Dateien sind nicht automatisch geprüfte oder freigegebene Assets; ihre Inhalte und Rechte müssen vor jeder Verwendung separat geklärt werden.
+**Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Unbekannte Archive/Binärdateien nicht ausführen. Die aktuell priorisierten Uploads sind nicht geprüft und nicht als Arbeitsbasis bestätigt; siehe `docs/PROJECT-STATUS.md`.
 
-Vorgeschlagene Ablage, sobald passende Dateien vorliegen:
+Mögliche Ablage für geprüfte Dateien:
 
 - `assets/source-art/` — eigene, editierbare Quelldateien;
-- `assets/exports/` — freigegebene Exporte, sofern sie nicht reproduzierbar generiert werden können;
-- `assets/patches/` — zulässige Patch-Dateien mit dokumentierter Basisversion.
+- `assets/exports/` — freigegebene Exporte, sofern nicht reproduzierbar generierbar;
+- `assets/patches/` — erlaubte Patches mit dokumentierter Basisversion.
 
-Keine leeren Strukturordner oder unklare Archive hinzufügen; Verzeichnisse entstehen mit den geprüften Dateien.
+Keine leeren Strukturordner oder ungeklärten Archive hinzufügen. Ignore-Regeln entfernen keine bereits versionierten Dateien.
