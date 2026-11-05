@@ -1,50 +1,39 @@
 # Projektstatus und nächste Schritte
 
-**Statusaufnahme:** 5. November 2026. Nur GitHub-Metadaten, Commit-Vorschau und Dokumentation wurden geprüft; keine lokalen Dateien oder Builds wurden ausgeführt.
+**Statusaufnahme:** basierend auf dem aktuellen `main`-Tree, Commit `45b4363f764193beadf9361fc1b829efb0935ea8`. GitHub-Dateibaum und Dokumentation wurden geprüft; keine lokalen Dateien, Builds oder Emulatorl��ufe.
 
 ## Kurzstatus
 
 | Bereich | Status | Beleg / offene Frage |
 | --- | --- | --- |
-| Ziel | HeartGold-Code-Arbeitsbasis geplant | Nintendo-DS-Codebasis; nicht bloß eine Umbenennung. |
-| HeartGold-Referenz | Gepinntes Submodule vorhanden | `sources/pokeheartgold` → `pret/pokeheartgold` @ `e1d5a4606640e31c44d36714ad0b5cdd9c8763fd`; Upstream kennzeichnet Stand als instabilen WIP. |
-| Zwei priorisierte Uploads | Ungeprüft | ZIP-Commit-Vorschau zeigt Fehlermeldungstext; `.bin`-Format und Zweck unbekannt. |
-| PixelFX | Code-/Renderwerkzeug dokumentiert | Keine HeartGold-Portierung oder In-Game-Integration nachgewiesen. |
-| Codeänderungen / Build / Test | Nicht erfolgt/nicht belegt | Bisherige Änderungen waren Dokumentation. |
-| Altbestand-Bereinigung | Noch nicht vollständig | GitHub-Schreibwerkzeuge in dieser Sitzung können Dateien aktualisieren/hinzufügen, aber keine bestehenden Dateien oder Gitlinks löschen. Die unten aufgeführten Altdateien sind daher weiterhin im Repository. |
+| HeartGold-Ziel | Geplant, kein bloßer Namenswechsel | DS-Codebasis; `pret/pokeheartgold` ist ein separates Upstream-Projekt. |
+| HeartGold-Referenz | Gepinntes Submodule vorhanden | `sources/pokeheartgold` @ `e1d5a4606640e31c44d36714ad0b5cdd9c8763fd`. Build und Lizenz-/Nutzungsvoraussetzungen lokal offen. |
+| PixelFX | Code-/Renderwerkzeug dokumentiert | Kein Nachweis einer HeartGold-Portierung oder Spielintegration. |
+| Priorisierte Uploads | Ungeprüft und im aktuellen Tree vorhanden | `Pokemon - HeartGold Version (Europe).zip` und `decoded-20261105072839.bin`; ZIP-Commit-Vorschau enthält Fehlermeldungstext, BIN-Format unbekannt. |
+| Früherer visueller QA-Inhalt | Im aktuellen Tree entfernt | Alte Projekt-Checklisten, Inventare und Archiv sind im geprüften Tree nicht vorhanden. Keine Aussage über die Git-Historie. |
+| Veraltete Referenz-Gitlinks | Noch vorhanden | `sources/pokeemerald`, `sources/pokefirered`, `sources/pokemon-clover` samt `.gitmodules`-Einträgen sind in `main` noch gelistet; siehe Löschmappe. |
+| Build / Codeänderung / Spieltest | Nicht erfolgt/nicht belegt | Bisherige Änderungen sind Dokumentation und Projektpflege. |
 
-## Verbleibender Altbestand, der gelöscht werden muss
+## Noch offene Bereinigung im aktuellen Tree
 
-Folgende bisherige Dateien bzw. Quellen sind nicht Teil des aktuellen Ziels und bleiben trotz Bereinigungsversuchen versioniert:
+1. Die Gitlinks `sources/pokeemerald`, `sources/pokefirered` und `sources/pokemon-clover` aus dem Repository entfernen.
+2. Nach dem Gitlink-Entfernen die entsprechenden Abschnitte aus `.gitmodules` löschen. `sources/pokeheartgold` und `sources/pixelfx` behalten.
+3. Frühere projektspezifische Dateien/Archive sind im geprüften `main`-Tree bereits nicht mehr vorhanden; dafür ist keine weitere Tree-Löschung nötig.
+4. Zwei HeartGold-Upload-Dateien unangetastet lassen, wie vom Eigentümer festgelegt. Sie sind nicht als valide Arbeitsgrundlage bestätigt.
+5. Eine Bereinigung des aktuellen Trees löscht keine älteren Commits. History-Rewrite ist separat und wurde nicht durchgeführt.
 
-- `Pokemon - HeartGold Version (Europe).zip` — Commit-Vorschau war eine Fehlermeldung, kein bestätigtes Archiv.
-- `decoded-20261105072839.bin` — unbekanntes Format und unbekannte Herkunft.
-- `soulgold-v1.2.zip` und die SoulGold-spezifischen Dateien unter `docs/`.
-- Unverbundene frühere Referenz-Gitlinks `sources/pokeemerald`, `sources/pokefirered` und `sources/pokemon-clover`.
-- Frühere Emerald-Archivdateien, falls im Branch/Git-Verlauf weiterhin vorhanden.
+## Nächste Schritte
 
-**Wichtig:** `.gitignore` verhindert höchstens zukünftiges versehentliches Hinzufügen; getrackte Dateien werden dadurch nicht aus dem aktuellen Commit oder der Historie gelöscht. Eine vollständige Bereinigung braucht echte Git-Entfernungen. Das Löschen bzw. Umschreiben der Historie wurde nicht durchgeführt.
+### P0 — sichere Quellen und Bereinigung
 
-## Bereits erledigte Maßnahmen
-
-- Aktive README und Dokumentationsindex auf HeartGold/PixelsFX-Arbeitsablauf fokussiert.
-- HeartGold/SoulGold als unterschiedliche Plattform-/Quellbasen abgegrenzt.
-- Prüfgates für Uploads, Baseline-Build und PixelFX-Portierung dokumentiert.
-- Schutzregeln für lokal zu prüfende Binärdateien ergänzt.
-
-## Blocker und nächste Schritte
-
-### P0 — Altbestand und Uploads
-
-- [ ] In einem lokalen Checkout die oben genannten Altdateien und unerwünschten Gitlinks aus dem aktuellen Tree entfernen.
-- [ ] Eigentümer klärt Herkunft, Rechte und Zweck beider priorisierter Uploads; unbekannte Binärdateien nicht ausführen.
-- [ ] ZIP-Vorschau zeigt Fehlermeldung; nicht als gültiges Archiv voraussetzen.
-- [ ] Wenn vollständige Entfernung aus der Git-Historie gewünscht ist, separate History-Rewrite-Maßnahme mit Backup und Teamabstimmung durchführen.
+- [ ] Manuelle Löschmappe ausführen, um nur die drei unnötigen Gitlinks zu entfernen und `.gitmodules` anschließend konsistent zu aktualisieren.
+- [ ] Eigentümer klärt Herkunft, Rechte und Zweck der zwei Uploads. Unbekannte Binärdateien nicht ausführen oder erneut hochladen.
+- [ ] ZIP-Vorschau zeigt eine Fehlermeldung; nicht als gültiges Archiv voraussetzen.
 
 ### P1 — HeartGold-Codebasis
 
 - [ ] Upstream-Installations-/Build-Anleitung und Nutzungsbedingungen am gepinnten Stand prüfen.
-- [ ] Baseline-Build in zulässiger Umgebung ausführen und Ergebnis protokollieren.
+- [ ] Baseline-Build in zulässiger Umgebung ausführen und Ergebnis mit Quellcommit/Umgebung dokumentieren.
 - [ ] Danach eine konkrete, kleine HeartGold-Codeänderung auswählen.
 
 ### P2 — PixelFX-Prototyp und Portierung

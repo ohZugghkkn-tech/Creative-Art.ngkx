@@ -1,61 +1,67 @@
-# Löschmappe: Altbestand aus dem früheren Projekt
+# Löschmappe: noch offene Bereinigung im aktuellen Main-Tree
 
-Diese Datei ist eine **Löschliste für die manuelle Bereinigung**. Die unten aufgeführten Dateien werden hier nicht archiviert oder verschoben. Bitte aus dem Repository entfernen; ein Verschieben in diesen Ordner würde sie weiterhin versionieren.
+Diese Mappe ist eine To-do-Liste, kein Archiv. Die darin genannten Pfade werden nicht hierher verschoben. Stand geprüft anhand `main` bei Commit `45b4363f764193beadf9361fc1b829efb0935ea8`.
 
-## Aus dem aktuellen Git-Tree entfernen
+## Bereits aus dem aktuellen Tree verschwunden
 
-Diese SoulGold-Dateien waren im geprüften Tree des HeartGold-Arbeitsbranches vorhanden:
+Die folgenden früheren Projektdateien sind im geprüften Tree nicht mehr vorhanden; dafür ist keine weitere Dateilöschung erforderlich:
 
-- [ ] `soulgold-v1.2.zip`
-- [ ] `docs/SoulGold-1.2-PixelFX-Effekt-Checkliste.md`
-- [ ] `docs/TODO-SoulGold-1.3-Visual-QA.md`
-- [ ] `docs/soulgold-v1.2-animation-inventory.csv`
-- [ ] `docs/soulgold-v1.2-animation-inventory.md`
+- `soulgold-v1.2.zip`
+- `docs/SoulGold-1.2-PixelFX-Effekt-Checkliste.md`
+- `docs/TODO-SoulGold-1.3-Visual-QA.md`
+- `docs/soulgold-v1.2-animation-inventory.csv`
+- `docs/soulgold-v1.2-animation-inventory.md`
 
-## Nicht mehr benötigte Referenz-Submodule entfernen
+Das sagt nichts über ältere Commits aus.
 
-Diese Submodule sind keine HeartGold- oder PixelFX-Arbeitsgrundlage:
+## Noch zu entfernen: unnötige Submodule
+
+Im aktuellen Tree sind diese Gitlinks und `.gitmodules`-Einträge weiterhin vorhanden. Sie sind für das HeartGold-/PixelFX-Ziel nicht nötig:
 
 - [ ] `sources/pokeemerald`
 - [ ] `sources/pokefirered`
 - [ ] `sources/pokemon-clover`
 
-Dazu auch die jeweiligen Abschnitte dieser Pfade aus `.gitmodules` entfernen. Behalten werden `sources/pokeheartgold` und `sources/pixelfx`.
+Sauber aus dem lokalen Clone deinitialisieren und per Git entfernen; danach die drei passenden Abschnitte aus `.gitmodules` löschen und Änderungen prüfen. Behalten:
 
-Beispiel für einen lokalen Checkout: zuerst die genannten Submodule mit `git submodule deinit -f -- <pfad>` deinitialisieren, anschließend ihre Gitlinks mit `git rm -f -- <pfad>` entfernen, `.gitmodules` bereinigen und alle Änderungen prüfen, bevor du commitest. Keine HeartGold- oder PixelFX-Dateien dabei löschen.
+- `sources/pokeheartgold`
+- `sources/pixelfx`
 
-## SoulGold-Verweise aus aktiven Texten entfernen
+Beispielablauf in einem lokalen Clone, Pfade sorgfältig prüfen:
 
-Wenn wirklich keinerlei Erwähnung des früheren Projekts bleiben soll, entferne die historischen Vergleichssätze und SoulGold-Nennungen aus diesen aktuellen HeartGold-Dokumenten (die Dokumente selbst behalten):
+```sh
+git submodule deinit -f -- sources/pokeemerald sources/pokefirered sources/pokemon-clover
+git rm -f -- sources/pokeemerald sources/pokefirered sources/pokemon-clover
+# Danach die drei entsprechenden Abschnitte in .gitmodules entfernen
+git status --short
+git diff -- .gitmodules
+git diff --cached --stat
+```
 
-- [ ] `README.md`
-- [ ] `docs/HEARTGOLD-CODE-BASELINE.md`
-- [ ] `docs/HEARTGOLD-CODE-REBUILD.md`
-- [ ] `docs/PROJECT-STATUS.md`
-- [ ] `docs/PROJECT-MANAGEMENT.md`
+Nicht committen, bevor im Diff ausschließlich die beabsichtigten Gitlink-Entfernungen und `.gitmodules`-Änderung stehen.
 
-Prüfe auch `.gitignore` und entferne nur alte SoulGold-/Emerald-spezifische Ausnahmen, falls sie nach dem Löschen nicht mehr gebraucht werden. Allgemeine Schutzregeln für ROMs, `.bin`-/`.zip`-Dateien und PixelFX-Vorschauen beibehalten.
+## Beibehalten
 
-## Nicht in dieser Löschliste
+Die zwei vom Eigentümer priorisierten Dateien nicht löschen oder verändern:
 
-Die folgenden zwei vom Eigentümer priorisierten Uploads bleiben unangetastet, bis der Eigentümer selbst entscheidet:
+- `Pokemon - HeartGold Version (Europe).zip` — Commit-Vorschau zeigte Fehlermeldungstext statt eines belegten gültigen Archivs.
+- `decoded-20261105072839.bin` — Format und Herkunft unbekannt.
 
-- `Pokemon - HeartGold Version (Europe).zip`
-- `decoded-20261105072839.bin`
+Beide Dateien sind ungeprüft. Nicht ausführen, weitergeben oder erneut hochladen. Keine vollständige kommerzielle ROM in Git speichern.
 
-Sie sind ungeprüft; die ZIP-Commit-Vorschau zeigte eine Fehlermeldung. Nicht ausführen, weitergeben oder erneut hochladen.
+Auch behalten:
 
-## Nicht Teil dieser Löschaktion
+- `sources/pokeheartgold` — HeartGold-Referenz.
+- `sources/pixelfx` und `.agents/skills/pixelfx/` — PixelFX-Codewerkzeug.
 
-- `sources/pokeheartgold` — HeartGold-Code-Referenz behalten.
-- `sources/pixelfx` und `.agents/skills/pixelfx/` — PixelFX-Projektwerkzeug behalten.
-- Keine Git-Historie umschreiben. Diese Löschmappe beschreibt nur das Entfernen aus dem aktuellen Tree. Vollständiges Löschen aus früheren Commits wäre eine separate, abgestimmte History-Rewrite-Maßnahme mit Backup.
-- `Pokemon - Emerald Version (U)(TrashMan).zip` war im geprüften aktuellen Tree nicht vorhanden; daher hier keine aktuelle Löschaktion dafür.
+## Git-Historie
 
-## Nach der Bereinigung prüfen
+Diese Bereinigung betrifft nur den aktuellen Tree. Frühere Commits bleiben bestehen. History-Rewrite wurde nicht angefordert oder durchgeführt; es wäre ein separates Vorhaben mit Backup und Koordination aller Klone.
 
-- [ ] `git status` und `git diff --stat` prüfen.
-- [ ] `git ls-files | grep -iE 'soulgold|pokeemerald|pokefirered|pokemon-clover'` liefert keine alten getrackten Dateien/Gitlinks (gegebenenfalls einzelne Suchtreffer im Namen der Löschmappe ausnehmen).
-- [ ] `git submodule status` enthält weiterhin `sources/pokeheartgold` und `sources/pixelfx`.
-- [ ] HeartGold-Uploads wurden nicht verändert.
-- [ ] Bereinigung committen und anschließend bei Bedarf separat über die Git-Historie entscheiden.
+## Abschlusskontrolle
+
+- [ ] Frühere projektspezifische Dateien sind im aktuellen Tree nicht vorhanden.
+- [ ] Die drei unnötigen Referenz-Gitlinks sind entfernt und nicht mehr in `.gitmodules` eingetragen.
+- [ ] `sources/pokeheartgold` und `sources/pixelfx` bleiben vorhanden.
+- [ ] Beide priorisierten Uploads sind unverändert.
+- [ ] `git status`, `git diff --cached --stat` und `.gitmodules` geprüft.

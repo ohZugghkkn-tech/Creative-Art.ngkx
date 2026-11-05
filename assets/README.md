@@ -2,7 +2,7 @@
 
 Nur eigene oder nachweislich freigegebene Arbeitsdateien ablegen. Herkunft, Lizenz/Rechte, Basisversion und Verwendungszweck dokumentieren.
 
-**Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Unbekannte Archive/Binärdateien nicht ausführen. Die aktuell priorisierten Uploads sind nicht geprüft und nicht als Arbeitsbasis bestätigt; siehe `docs/PROJECT-STATUS.md`.
+**Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Unbekannte Archive/Binärdateien nicht ausführen. Die beiden priorisierten Uploads sind ungeprüft; Details stehen in `docs/PROJECT-STATUS.md`.
 
 Mögliche Ablage für geprüfte Dateien:
 

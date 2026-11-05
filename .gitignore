@@ -11,11 +11,9 @@
 *.bin
 *.zip
 
-# Bereits bekannte Projektdateien (Ignore-Regeln entfernen keine getrackten Dateien)
+# Vom Eigentümer priorisierte Uploads: lokal prüfbar, nicht erneut tracken
 /Pokemon - HeartGold Version (Europe).zip
 /decoded-20261105072839.bin
-/Pokemon - Emerald Version (U)(TrashMan).zip
-/soulgold-v1.2.zip
 
 # PixelFX-Vorschauen
 /sources/pixelfx/records/
