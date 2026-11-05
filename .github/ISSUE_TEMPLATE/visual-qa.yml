@@ -1,5 +1,5 @@
 name: Visuelle QA
- description: Einen konkreten visuellen Mangel oder eine begründete Prüfentscheidung dokumentieren.
+description: Einen konkreten visuellen Mangel oder eine begründete Prüfentscheidung dokumentieren.
 title: "[Visual QA] "
 body:
   - type: markdown
