@@ -1,4 +1,4 @@
-# Lokale Spieldaten und generierte Dateien
+# Schutz für lokal zu prüfende oder generierte Dateien
 *.gba
 *.gbc
 *.gb
@@ -8,8 +8,12 @@
 *.srm
 *.state
 *.rtc
+*.bin
+*.zip
 
-# Projektbezogene Archive im Repository (Hinweis: Ignore-Regeln entfernen keine bereits getrackten Dateien)
+# Bekannte projektbezogene Uploads (Ignore-Regeln entfernen keine bereits getrackten Dateien)
+/Pokemon - HeartGold Version (Europe).zip
+/decoded-20261105072839.bin
 /Pokemon - Emerald Version (U)(TrashMan).zip
 /soulgold-v1.2.zip
 

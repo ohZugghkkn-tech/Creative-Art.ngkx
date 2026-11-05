@@ -1,66 +1,57 @@
 # Projektstatus und nächste Schritte
 
-**Statusaufnahme:** 5. November 2026. Dieser Status unterscheidet bestätigte Repository-Fakten von ungeprüften Uploads und nicht ausgeführten lokalen Tests.
+**Statusaufnahme:** 5. November 2026. Nur GitHub-Metadaten, Commit-Vorschau und Dokumentation wurden geprüft; keine lokalen Dateien oder Builds wurden ausgeführt.
 
 ## Kurzstatus
 
 | Bereich | Status | Beleg / offene Frage |
 | --- | --- | --- |
-| Projektziel | HeartGold-Code-Neuaufbau festgelegt | Der aktuelle Arbeitsauftrag ist [HeartGold-Code-Neuaufbau](HEARTGOLD-CODE-REBUILD.md); SoulGold-Dokumente sind historische Referenzen. |
-| Höchste unmittelbare Priorität | Zwei letzte Uploads ungeprüft | `Pokemon - HeartGold Version (Europe).zip` und `decoded-20261105072839.bin` wurden im Commit `7edc36f` hinzugefügt. |
-| ZIP-Upload | Nicht als Archiv validiert | Commit-Vorschau enthält eine ROMSFUN-Fehlermeldung als Text; keine gültige ZIP-/ROM-Datei ist damit belegt. |
-| BIN-Upload | Format/Herkunft unbekannt | Commit-Vorschau reicht zur Bestimmung von Inhalt, Herkunft und Eignung nicht aus. |
-| HeartGold-Code-Referenz | Gepinntes Submodule vorhanden | `sources/pokeheartgold` verweist auf `pret/pokeheartgold`; Arbeitsbasis, Build und Lizenzbedingungen sind noch zu verifizieren. |
-| PixelFX | Code-/Render-Werkzeug dokumentiert | Bibliothek kann Effekte rendern und prüfen; daraus folgt keine HeartGold-Portierung oder Integration. |
-| HeartGold-Inventar/QA | Noch nicht erstellt | Erst nach Verifizierung der Ziel-Codebasis sinnvoll aufzubauen. |
-| Build/Emulator/Regression | Nicht belegt | Keine hier nachgewiesenen lokalen Build- oder Emulatorläufe. |
-| Ältere SoulGold-Dateien/Planung | Historisch, erneut zu prüfen | Vorhandene Dokumente und Archive nicht automatisch löschen oder als aktuelle Grundlage behandeln. |
+| Ziel | HeartGold-Code-Arbeitsbasis geplant | Kein bloßer Namenswechsel: HeartGold (DS) und SoulGold (GBA) sind unterschiedliche Projekt-/Plattformbasen. |
+| HeartGold-Referenz | Gepinntes Submodule vorhanden | `sources/pokeheartgold` → `pret/pokeheartgold` @ `e1d5a4606640e31c44d36714ad0b5cdd9c8763fd`; Upstream kennzeichnet Stand als instabilen WIP. |
+| Zwei priorisierte Uploads | Ungeprüft, nicht als Basis geeignet bestätigt | ZIP-Commit-Vorschau ist Fehlermeldungstext; `.bin`-Format und Zweck unbekannt. |
+| PixelFX | Code-/Renderwerkzeug dokumentiert | Kein Nachweis einer HeartGold-Portierung oder In-Game-Integration. |
+| Codeänderungen / Build / Test | Nicht erfolgt/nicht belegt | GitHub-Dokumentationsänderungen sind keine Spielcodeänderung. |
+| Historische SoulGold-Unterlagen | Nicht HeartGold-validiert | Als historische Referenz beibehalten, nicht automatisch übertragen. |
 
-## Blocker und Risiken
+## Bereits erledigte Maßnahmen
 
-1. **Upload-Gültigkeit:** Die ZIP-Commit-Vorschau ist eine Fehlernachricht, kein gültiges Archiv. Die `.bin`-Datei ist in Format und Inhalt ungeklärt.
-2. **Herkunft/Rechte:** Für beide Uploads fehlen bestätigte Herkunft und Weitergaberechte. Keine Datei erneut hochladen oder veröffentlichen.
-3. **Ziel-Codebasis:** Das HeartGold-Submodule ist eine Referenz; ein erfolgreicher, reproduzierbarer Build mit zulässigen Eingaben ist nicht nachgewiesen.
-4. **Historische SoulGold-Dokumentation:** Move- und PixelFX-Checklisten sind nicht automatisch HeartGold-spezifisch und dürfen nicht als HeartGold-QA-Ergebnis gelten.
-5. **PixelFX-GBA-Eignung:** Effekte müssen ausgewählt, in Pixel-/Farb-/Speicherlimits übersetzt, in den Zielcode integriert und getestet werden.
+- HeartGold und SoulGold als unterschiedliche Plattform-/Quellbasen abgegrenzt.
+- Prüfgates für Uploads, Baseline-Build und PixelFX-Portierung beschrieben.
+- HeartGold-Upstream-WIP-Risiko dokumentiert.
+- PixelFX von HeartGold-Integration und Spieltest klar unterschieden.
+- Branch `.gitignore` um Schutzregeln für HeartGold-Upload-Artefakte ergänzt.
 
-## Nächste Schritte nach Priorität
+## Blocker und nächste Schritte
 
-### P0 — Die zwei Uploads
+### P0 — Uploads
 
-- [ ] Herkunft und Rechte klären.
-- [ ] Lokal und isoliert Dateiformat, Größe und Prüfsummen ermitteln; unbekannte Binärdateien nicht ausführen.
-- [ ] ZIP-Gültigkeit und `.bin`-Format anhand verlässlicher Informationen prüfen.
-- [ ] Bei ungültigen/ungeeigneten Dateien blockiert dokumentieren und zulässige Quelltexte, eigene Assets oder Patch-Dateien anfordern.
+- [ ] Eigentümer klärt Herkunft, Rechte und Zweck beider Dateien.
+- [ ] ZIP-Vorschau zeigt Fehlermeldung; nicht als gültiges Archiv voraussetzen.
+- [ ] BIN nicht ausführen; ohne bekannte Herkunft/Format blockiert lassen.
 
-### P1 — HeartGold-Code-Neuaufbau
+### P1 — HeartGold-Codebasis
 
-- [ ] Prüfen, ob der gepinnte `sources/pokeheartgold`-Stand die vereinbarte Codebasis sein soll; Upstream-Lizenz und Build-Anleitung beachten.
-- [ ] Build-Abhängigkeiten und lokale, rechtmäßige Eingaben dokumentieren.
-- [ ] HeartGold-spezifischen Projektumfang und QA-Inventar festlegen; SoulGold-Annahmen nicht blind übernehmen.
+- [ ] Upstream `INSTALL.md`, Lizenz-/Nutzungshinweise und Build-System am gepinnten Commit lokal prüfen.
+- [ ] Baseline-Build in zulässiger Umgebung ausführen und Ergebnis protokollieren.
+- [ ] Erst dann eine konkrete, kleine HeartGold-Codeänderung auswählen.
 
-### P2 — PixelFX-Prototyp
+### P2 — PixelFX-Prototyp und Portierung
 
-- [ ] Nach geklärter Codebasis einen repräsentativen visuellen Fall auswählen.
-- [ ] Mit PixelFX vorhandene Module suchen, rendern, Frames prüfen und ggf. eigenen Effekt im Code entwickeln.
-- [ ] PixelFX-Effekt für HeartGold anpassen/portieren und in der Zielumgebung prüfen; Vorschau und Integration getrennt dokumentieren.
+- [ ] Einen geeigneten Effekt als Code-Prototyp suchen oder erstellen und rendern.
+- [ ] PixelFX-Codeprüfung und HeartGold-Portierung getrennt ausweisen.
+- [ ] DS-In-Game-Tests nur nach tatsächlicher Ausführung als abgeschlossen markieren.
 
-### P3 — Skalierung und Abnahme
-
-- [ ] HeartGold-spezifisches Inventar, Vorher/Nachher-Nachweise und reproduzierbare Regression ergänzen.
-- [ ] Änderungen, Tests, Patch-Basis und bekannte Grenzen dokumentieren.
-
-**Gate:** Keine vollständige ROM oder Spielstände versionieren. Keine Integration behaupten, bevor die Arbeitsbasis zulässig und reproduzierbar ist und ein entsprechender Testnachweis vorliegt.
+**Gate:** Keine vollständige ROM oder Spielstände versionieren. Keine tatsächlichen Builds, Sichtungen oder Codeänderungen behaupten, solange die Nachweise fehlen.
 
 ## Statusdefinitionen
 
-- **Offen:** Noch nicht bearbeitet oder belegt.
-- **In Arbeit:** Bearbeitung läuft, Abnahmekriterien sind nicht erfüllt.
-- **Blockiert:** Konkrete Voraussetzung fehlt und ist benannt.
-- **Geprüft:** Prüfung mit Version und reproduzierbarem Nachweis abgeschlossen.
-- **Integriert:** Änderung liegt in der freigegebenen Quellbasis; bedeutet nicht automatisch getestet.
-- **Getestet:** Benannte Tests wurden mit dokumentiertem Ergebnis durchgeführt.
+- **Offen:** Noch nicht bearbeitet/belegt.
+- **In Arbeit:** Bearbeitung läuft, Abnahmekriterien offen.
+- **Blockiert:** Voraussetzung fehlt und ist benannt.
+- **Geprüft:** Version und reproduzierbarer Nachweis vorhanden.
+- **Integriert:** Änderung liegt in freigegebener Quelle; nicht automatisch getestet.
+- **Getestet:** Benannte Tests wurden mit Ergebnis protokolliert.
 
 ## Benötigt vom Eigentümer
 
-Bitte Herkunft/Rechte und den beabsichtigten Zweck beider priorisierten Uploads bestätigen. Wenn die ZIP nur eine Download-Fehlermeldung ist, bitte eine zulässige HeartGold-Codequelle, eigene Assets oder einen erlaubten Patch statt einer vollständigen kommerziellen ROM bereitstellen. Unbekannte Binärdateien bitte nicht ausführen.
+Herkunft/Rechte und vorgesehener Zweck der beiden priorisierten Uploads. Die ZIP-Datei sollte wegen der Fehlermeldung nicht als Codebasis gelten. Keine vollständige kommerzielle ROM als Ersatz hochladen; nutze zulässige Quelltexte, eigene Assets oder erlaubte Patches.
