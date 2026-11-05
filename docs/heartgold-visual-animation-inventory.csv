@@ -1,0 +1,47 @@
+scope,symbol_or_id,source_path,caller_or_script,resource_id,visual_purpose,mapping_status,visual_review_status,change_status,test_status,evidence,notes
+battle,BATTLE_ANIMATION_NONE,include/constants/battle_subscript.h,,0,No animation,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant; not a move animation.
+status,BATTLE_ANIMATION_ASLEEP,include/constants/battle_subscript.h,,1,Sleep status,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_POISONED,include/constants/battle_subscript.h,,2,Poison status,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_BURNED,include/constants/battle_subscript.h,,3,Burn status,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_FROZEN,include/constants/battle_subscript.h,,4,Frozen status,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_PARALYZED,include/constants/battle_subscript.h,,5,Paralysis status,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_CONFUSED,include/constants/battle_subscript.h,,6,Confusion,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+status,BATTLE_ANIMATION_INFATUATED,include/constants/battle_subscript.h,,7,Infatuation,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_LEVEL_UP,include/constants/battle_subscript.h,,8,Level up,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+item,BATTLE_ANIMATION_BAG_ITEM,include/constants/battle_subscript.h,,9,Bag item,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+item,BATTLE_ANIMATION_HELD_ITEM,include/constants/battle_subscript.h,,10,Held item,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_SHINY,include/constants/battle_subscript.h,,11,Shiny appearance,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_STAT_BOOST,include/constants/battle_subscript.h,,12,Stat boost,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_STAT_DROP,include/constants/battle_subscript.h,,13,Stat drop,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+healing,BATTLE_ANIMATION_RESTORE_HP,include/constants/battle_subscript.h,,14,Restore HP,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_SUB_OUT,include/constants/battle_subscript.h,,15,Sub out; caller semantics need checking,source-confirmed,not-reviewed,not-started,not-run,,Do not infer exact meaning from symbol alone.
+battle,BATTLE_ANIMATION_SUB_IN,include/constants/battle_subscript.h,,16,Sub in; caller semantics need checking,source-confirmed,not-reviewed,not-started,not-run,,Do not infer exact meaning from symbol alone.
+battle,BATTLE_ANIMATION_ITEM_ESCAPE,include/constants/battle_subscript.h,,17,Item escape,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+weather,BATTLE_ANIMATION_WEATHER_FOG,include/constants/battle_subscript.h,,18,Fog,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+weather,BATTLE_ANIMATION_WEATHER_RAIN,include/constants/battle_subscript.h,,19,Rain,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+weather,BATTLE_ANIMATION_WEATHER_HAIL,include/constants/battle_subscript.h,,20,Hail,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+weather,BATTLE_ANIMATION_WEATHER_SAND,include/constants/battle_subscript.h,,21,Sand,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+weather,BATTLE_ANIMATION_WEATHER_SUN,include/constants/battle_subscript.h,,22,Sun,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_SUBSTITUTE_IN,include/constants/battle_subscript.h,,25,Substitute in,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+battle,BATTLE_ANIMATION_SUBSTITUTE_OUT,include/constants/battle_subscript.h,,26,Substitute out,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+mood,BATTLE_ANIMATION_HAPPY,include/constants/battle_subscript.h,,27,Happy reaction,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+mood,BATTLE_ANIMATION_EATING,include/constants/battle_subscript.h,,28,Eating reaction,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+mood,BATTLE_ANIMATION_ANGRY,include/constants/battle_subscript.h,,29,Angry reaction,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_CURSE,include/constants/battle_subscript.h,,30,Curse damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_NIGHTMARE,include/constants/battle_subscript.h,,31,Nightmare damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_LEECH_SEED,include/constants/battle_subscript.h,,32,Leech Seed damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_BIND,include/constants/battle_subscript.h,,33,Bind damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_WRAP,include/constants/battle_subscript.h,,34,Wrap damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_FIRE_SPIN,include/constants/battle_subscript.h,,35,Fire Spin damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_MAGMA_STORM,include/constants/battle_subscript.h,,36,Magma Storm damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_CLAMP,include/constants/battle_subscript.h,,37,Clamp damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_WHIRLPOOL,include/constants/battle_subscript.h,,38,Whirlpool damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_SAND_TOMB,include/constants/battle_subscript.h,,39,Sand Tomb damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+residual-damage,BATTLE_ANIMATION_DAMAGE_INGRAIN,include/constants/battle_subscript.h,,40,Ingrain damage,source-confirmed,not-reviewed,not-started,not-run,,General battle effect constant.
+move-code,PlayMoveAnimation,asm/macros/btlcmd.inc,src/battle/battle_command.c,,Battle script command dispatch for current/temp move,mapping-unresolved,not-reviewed,not-started,not-run,,Leads to controller; does not identify visual resource by itself.
+move-code,PlayMoveAnimationOnMons,asm/macros/btlcmd.inc,src/battle/battle_command.c,,Move animation with explicit attacker/target,mapping-unresolved,not-reviewed,not-started,not-run,,Leads to controller; does not identify visual resource by itself.
+controller,BattleController_SetMoveAnimation,include/battle/battle_controller.h,src/battle/battle_controller.c,,Builds MoveAnimation message and passes move/battler/context data,source-confirmed,not-reviewed,not-started,not-run,,Not itself the visual asset implementation.
+sprite-system,Sprite_SetAnimCtrlSeq,src/sprite.c,,Sprite sequence index,source-confirmed,not-reviewed,not-started,not-run,,Need resource bank and caller to identify each sequence.
+field-system,MapPropAnimationManager_LoadPropAnimationForOneShot,src/field/map_prop_animation.c,,Map object ID plus animation index,mapping-unresolved,not-reviewed,not-started,not-run,,Animation archive IDs read from associated list resource.
+field-3d,Field3dModelAnimation_LoadFromFilesystem,include/field/overlay_01_021FB878.h,,3D model animation resource index,mapping-unresolved,not-reviewed,not-started,not-run,,Inventory individual scene/model mappings separately.
+cutscene,LegendCutscene model animation sequences,src/field/legend_cutscene_camera.c,,Cutscene model sequence,mapping-unresolved,not-reviewed,not-started,not-run,,Specific per-scene resource IDs still need mapping.
