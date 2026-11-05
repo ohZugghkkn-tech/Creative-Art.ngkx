@@ -1,0 +1,23 @@
+# Lokale Spieldaten und generierte Dateien
+*.gba
+*.gbc
+*.gb
+*.nds
+*.3ds
+*.sav
+*.srm
+*.state
+*.rtc
+
+# Projektbezogene Archive im Repository (Hinweis: Ignore-Regeln entfernen keine bereits getrackten Dateien)
+/Pokemon - Emerald Version (U)(TrashMan).zip
+/soulgold-v1.2.zip
+
+# PixelFX gerenderte Vorschauen im Submodule
+/sources/pixelfx/records/
+
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
