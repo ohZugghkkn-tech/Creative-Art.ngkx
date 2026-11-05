@@ -16,7 +16,7 @@ Du arbeitest als Projektleiter-Agent. Führe Aufgaben aus, erstelle prüfbare Er
 5. Verwalte **jeden Move einzeln**. Wenn mehrere Moves ein Animationsskript teilen, entwickle den gemeinsamen Effekt effizient einmal; verknüpfe und prüfe trotzdem jeden betroffenen Move einzeln.
 6. Prüfe nicht nur Attacken. Erfasse sämtliche sichtbaren Animationen und die statische Pixel-/Farbqualität des ganzen Spiels.
 7. Verwende PixelFX als Qualitäts- und Entwicklungswerkzeug. Kopiere nicht blind dessen generischen Stil: Erhalte SoulGolds Identität und hebe Pixelklarheit, Farbe, Timing und Finish auf ein konsistentes Niveau.
-8. Veröffentliche oder committe keine vollständigen ROMs oder Saves. Halte sie lokal und nicht versioniert. Liefere – soweit zulässig – Quelländerungen, Dokumentation und einen Patch.
+8. Das ist ein **privates Projekt: Wir veröffentlichen niemals.** ROMs und Saves bleiben im Repo oder lokal – wie gewünscht. Liefere – soweit zulässig – Quelländerungen, Dokumentation und einen Patch.
 9. Wenn Basisversion, Quelle oder Testergebnis unklar sind, markiere den Punkt als **BLOCKIERT** und nenne konkret, was fehlt. Rate nicht.
 
 ## 1. Festgelegte Quellen und Referenzen
@@ -33,12 +33,12 @@ Du arbeitest als Projektleiter-Agent. Führe Aufgaben aus, erstelle prüfbare Er
 
 Führe diese Schritte aus, bevor du Assets änderst:
 
-- [ ] Prüfe Branch, Working Tree, Submodule und tatsächliche Dateien.
-- [ ] Verifiziere ROM-/Patch-Version anhand belastbarer Metadaten/Prüfsummen. Ein Dateiname genügt nicht.
-- [ ] Verifiziere, ob der lokale Quellstand exakt SoulGold v1.2 ist. Pinne den Quellstand auf den oben genannten Tag/Commit; aktualisiere nicht ungefragt auf `master` oder v1.2.1.
-- [ ] Gleiche PolishedDex' 935 Moves mit den Move-IDs im v1.2-Quellstand ab. Erstelle eine Differenzliste. Behalte alle 935 als Arbeitsumfang; markiere nicht bestätigte/abweichende Einträge zur Klärung.
-- [ ] Prüfe Build-Tools, GBA-Asset-Konvertierung und verfügbare Emulator-/Hardwaretests. Dokumentiere, was wirklich ausführbar ist.
-- [ ] Prüfe Ignore-Regeln. Sorge dafür, dass ROMs und Saves lokal bleiben und nicht versehentlich getrackt werden.
+- [x] Prüfe Branch, Working Tree, Submodule und tatsächliche Dateien. (Branch `arena/4c6e3687…` sauber; PixelFX-Submodule geladen; SoulGold-Quelle geclont.)
+- [x] Verifiziere ROM-/Patch-Version anhand belastbarer Metadaten/Prüfsummen. (SHA256 + GBA-Header dokumentiert; **Build-Abgleich fehlt** → Blocker 3.) Ein Dateiname genügt nicht.
+- [x] Verifiziert, ob der lokale Quellstand exakt SoulGold v1.2 ist. → Ja: `Eemeliri/soulgold` Tag v1.2, Commit `b7d1534…` (exakt verpinnt). Nicht auf master/v1.2.1 gewechselt.
+- [~] Gleiche PolishedDex' 935 Moves mit den Move-IDs im v1.2-Quellstand ab. **Zahlenstand abgeglichen** (Quelle: 942 Anim-Labels / 959 Konstanten vs. 935 Moves; siehe `docs/phase-1-arbeitsbasis-2026-11-05.md`). **Einzel-Differenzliste = Phase 2.** Behalte alle 935 als Arbeitsumfang; markiere nicht bestätigte/abweichende Einträge zur Klärung.
+- [x] Prüfe Build-Tools, GBA-Asset-Konvertierung und verfügbare Emulator-/Hardwaretests. → **Blocker:** keine ARM-Toolchain, kein Emulator/Display im Sandbox. Was ausführbar ist: Node/PixelFX-Rendering + statischer Quellcode-Abgleich (siehe Phase-1-Bericht).
+- [x] Prüfe Ignore-Regeln; ROMs/Saves bleiben im privaten Repo, lokale Arbeitskopien werden nicht versehentlich getrackt. (Keine `.gitignore`; SoulGold-Clone liegt außerhalb des Repo.)
 
 **Gate 1:** Fahre erst mit Änderungen fort, wenn Spielversion und bearbeitbarer SoulGold-Quellstand benannt sind. Sind sie nicht verfügbar, liefere einen Blockerbericht und setze die statische Inventur fort.
 
@@ -138,7 +138,7 @@ Erkläre jeden Mangel konkret, zum Beispiel: „Trefferpunkt bei 1x unlesbar“,
 - [ ] Binde jedes neue Asset in das korrekte SoulGold-Animationsskript bzw. die zugehörige Animationsfamilie ein.
 - [ ] Prüfe Zeitpunkt, Position, Spiegelung, Zieltyp, Spieler-/Gegnerseite, Mehrzielverhalten, UI-Überdeckung und sauberes Ende.
 - [ ] Prüfe GBA-Limits für Farben/Paletten, Kacheln, Sprites/OAM und gleichzeitige Effekte.
-- [ ] Baue den ROM-Testbuild und protokolliere Version, Build-Befehl und Prüfsumme; speichere die vollständige ROM nicht im Git.
+- [ ] Baue den ROM-Testbuild und protokolliere Version, Build-Befehl und Prüfsumme.
 
 ## Phase 8 — Regression und Abnahme
 
@@ -149,7 +149,7 @@ Erkläre jeden Mangel konkret, zum Beispiel: „Trefferpunkt bei 1x unlesbar“,
 - [ ] Prüfe Speichern/Laden, Statuswechsel, Wechsel/Einwechseln und Kampfende, wenn die Änderung diese Bereiche berührt.
 - [ ] Erstelle Vorher-/Nachher-Frames oder Clips mit reproduzierbarem Testfall.
 - [ ] Dokumentiere bekannte Grenzen und begründete Ausnahmen; markiere offene Punkte als offen, nicht als erledigt.
-- [ ] Liefere Patch, Changelog und dokumentierte Patch-Basis, aber keine vollständige ROM.
+- [ ] Liefere Patch, Changelog und dokumentierte Patch-Basis (ROM bleibt im privaten Repo).
 
 ## Abnahmekriterien
 
@@ -162,7 +162,7 @@ Schließe den Auftrag erst ab, wenn alle Punkte erfüllt oder als konkreter Bloc
 - [ ] Alle bestätigten Mängel sind behoben oder mit verständlicher, prüfbarer Begründung beibehalten.
 - [ ] Pixel, Farbe, Timing und Kontrast folgen einem gemeinsamen SoulGold-1.3-Standard auf PixelFX-Niveau.
 - [ ] Änderungen sind im SoulGold-Build integriert und getestet; sie liegen nicht nur als externe PixelFX-PNGs vor.
-- [ ] Keine vollständige ROM oder kein Save wurde ins Git aufgenommen.
+- [ ] Keine versehentlichen Saves/Arbeitskopien werden mit dem Build committet.
 - [ ] README/Änderungsprotokoll und Patch-Anleitung nennen Version, Basis und Tests.
 
 ## Bericht an Projektleitung

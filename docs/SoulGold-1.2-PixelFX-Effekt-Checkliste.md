@@ -288,4 +288,4 @@ Die 935 Attacken sind nicht das ganze Animationsinventar. Auch diese Bereiche ko
 - [ ] PixelFX-Prototypen gerendert und bei GBA-Auflösung visuell geprüft.
 - [ ] Ausgewählte Effekte ins SoulGold-v1.2-Projekt konvertiert und eingebaut.
 - [ ] Einzel-, Doppel- und Mehrziel-Tests bestanden.
-- [ ] Die vollständige ROM bleibt lokal; nur erlaubte Quelldateien, Assets, Dokumentation und Patch-Artefakte werden versioniert.
+- [ ] ROMs, Saves, Quellcode, Assets, Dokumentation und Patch-Artefakte bleiben im privaten Projekt.
