@@ -1,18 +1,18 @@
 # Creative-Art.ngkx
 
-Arbeitsbereich für Pixel-Art, Animationen und eine geplante visuelle Qualitätsprüfung von SoulGold. Dieses Repository bündelt Referenzprojekte als Git-Submodule und dokumentiert den geplanten Prüf- und Verbesserungsprozess.
+Arbeitsbereich für die visuelle Überarbeitung und den geplanten Code-Neuaufbau auf Basis von **Pokémon HeartGold**. Die aktuelle Projektpriorität sind die zwei zuletzt hochgeladenen Dateien; sie sind jedoch noch nicht als brauchbare, rechtmäßig weitergebbare oder technisch valide Arbeitsgrundlage bestätigt. PixelFX wird als Code-basiertes Werkzeug für Entwurf, Rendering und Prüfung von Pixel-Art-Effekten verwendet.
 
-> **Status:** Projektplanung und Referenzstruktur sind vorhanden. Das Move-Inventar ist gestartet, aber noch leer (0/935). Belegte visuelle Prüfung und getestete SoulGold-Integration sind noch nicht dokumentiert. Siehe [Projektstatus](docs/PROJECT-STATUS.md).
+> **Projektstatus:** Zielrichtung ist von SoulGold auf eine HeartGold-Codebasis umgestellt. `sources/pokeheartgold` ist als gepinntes Referenz-Submodul vorhanden. Der HeartGold-Neuaufbau ist noch nicht gestartet oder gebaut. Die zwei priorisierten Uploads müssen zuerst lokal und sicher validiert werden; sie dürfen nicht erneut ins Repository hochgeladen oder inhaltlich verbreitet werden. Keine vollständigen kommerziellen Spiele oder ROMs einchecken.
 
-## Orientierung
+## Prioritäten und Einstieg
 
-- [Dokumentationsindex](docs/README.md) – Einstieg in Planung, Checklisten und Status.
-- [Projektstatus und nächste Schritte](docs/PROJECT-STATUS.md) – Fakten, offene Voraussetzungen und empfohlene Reihenfolge.
-- [Projektleitung mit KI-Unterstützung](docs/PROJECT-MANAGEMENT.md) – Verantwortlichkeiten, Prioritäten und Arbeitsablauf.
-- [Mitwirken und Dateien ablegen](CONTRIBUTING.md) – Benennung, Arbeitsablauf und Schutzregeln.
-- [Move-Inventar-Schema](docs/soulgold-v1.2-animation-inventory.md) – Felddefinitionen und belegter Status.
-- [SoulGold 1.3 Visual-QA-Arbeitsauftrag](docs/TODO-SoulGold-1.3-Visual-QA.md)
-- [SoulGold 1.2 PixelFX-Effekt-Checkliste](docs/SoulGold-1.2-PixelFX-Effekt-Checkliste.md)
+1. [HeartGold-Code-Neuaufbau: Arbeitsplan und Prüfgates](docs/HEARTGOLD-CODE-REBUILD.md) — maßgeblicher aktueller Arbeitsauftrag, einschließlich der beiden Uploads und PixelFX-Rolle.
+2. [Projektstatus und nächste Schritte](docs/PROJECT-STATUS.md) — belegter Status, Blocker und nächste Aktionen.
+3. [Dokumentationsindex](docs/README.md) — weitere Projekt- und QA-Dokumente.
+4. [Projektleitung mit KI-Unterstützung](docs/PROJECT-MANAGEMENT.md) — Arbeitsablauf und Verantwortlichkeiten.
+5. [Mitwirken und Dateien ablegen](CONTRIBUTING.md) — Regeln für Änderungen, Quellen und Schutz von Spieldaten.
+
+Die bisherigen SoulGold-Checklisten und Inventare bleiben als historische Referenz erhalten. Sie gelten nicht als aktueller HeartGold-Umfang, bis sie gegen die gewählte HeartGold-Codebasis überarbeitet wurden.
 
 ## Repository-Aufbau
 
@@ -20,48 +20,42 @@ Arbeitsbereich für Pixel-Art, Animationen und eine geplante visuelle Qualitäts
 .
 ├── .agents/skills/pixelfx/   Agenten-Anleitung für PixelFX
 ├── .github/                 Issue-Formular für visuelle QA
-├── assets/                   Hinweise zur Ablage zulässiger eigener Assets und Patches
-├── docs/                     Status, Planung, Inventar und Prüfnachweise
-├── sources/                  Gepinnte externe Git-Submodule
-├── .gitmodules               Submodule und Upstream-URLs
-├── CONTRIBUTING.md           Regeln für Beiträge und Dateien
-└── README.md                 Einstieg
+├── assets/                  Hinweise zu eigenen/freigegebenen Assets und Patches
+├── docs/                    Status, HeartGold-Plan, QA und historische SoulGold-Referenzen
+├── sources/                 Gepinnte externe Git-Submodule
+└── README.md                Projekteinstieg
 ```
 
-Die Unterprojekte in `sources/` sind Referenzen und werden als Git-Submodule auf festgehaltene Commits eingebunden. SoulGold selbst ist derzeit **nicht** in `.gitmodules` als bearbeitbares Quell-Submodule eingetragen. Der geplante Tag/Commit und der Status der Arbeitsbasis sind im [Projektstatus](docs/PROJECT-STATUS.md) dokumentiert.
+Externe Projekte unter `sources/` sind gepinnte Git-Submodule. `sources/pokeheartgold` ist derzeit eine Community-Code-Referenz, keine Bestätigung, dass die beiden Uploads eine lauffähige HeartGold-Codebasis oder eine passende ROM enthalten. Änderungen innerhalb fremder Submodule gehören nicht automatisch zu diesem Repository.
 
-## Quellen und Lizenzhinweise
+## Quellen und Einordnung
 
-| Projekt | Quelle | Einordnung |
+| Projekt | Quelle | Rolle |
 | --- | --- | --- |
-| PixelFX | [patch-gg/pixelfx](https://github.com/patch-gg/pixelfx) | Upstream-Projekt; Lizenz- und NOTICE-Angaben im Upstream beachten. |
-| HeartGold & SoulSilver | [pret/pokeheartgold](https://github.com/pret/pokeheartgold) | Community-Decompilation, nicht SoulGold. |
-| Emerald | [pret/pokeemerald](https://github.com/pret/pokeemerald) | Community-Decompilation und technische Referenz. |
-| FireRed | [pret/pokefirered](https://github.com/pret/pokefirered) | Community-Decompilation und technische Referenz. |
-| Pokémon Clover | [DEEEEELEEEETE/Pokemon-Clover](https://github.com/DEEEEELEEEETE/Pokemon-Clover) | Externe Referenz; Upstream-Status und Lizenz vor Nutzung prüfen. |
-| SoulGold | [Eemeliri/soulgold](https://github.com/Eemeliri/soulgold) | Externe Quellreferenz; im Projektplan auf Tag `v1.2` / Commit `b7d1534e3d120da9df0b03b685a91b655cf87cad` gepinnt. Nicht als Projekt-Submodule eingerichtet. |
+| PixelFX | [patch-gg/pixelfx](https://github.com/patch-gg/pixelfx) | Codebasierte Effektbibliothek und Render-/Prüfwerkzeuge; keine fertige HeartGold-Integration. |
+| HeartGold & SoulSilver | [pret/pokeheartgold](https://github.com/pret/pokeheartgold) | Gepinnte Community-Decompilation und Zielreferenz für den Code-Neuaufbau; Lizenz und Build-Anforderungen vor Nutzung prüfen. |
+| SoulGold | [Eemeliri/soulgold](https://github.com/Eemeliri/soulgold) | Frühere Projekt-Referenz; SoulGold-spezifische Pläne sind vorerst historisch. |
+| Emerald / FireRed / Pokémon Clover | Upstream-Projekte, siehe `sources/` | Nur technische/vergleichende Referenzen, sofern passend und rechtlich zulässig. |
 
-Die genannten Community-Projekte sind keine offiziellen Repositories von Nintendo, Game Freak oder The Pokémon Company. Prüfe für jedes Asset, jede Quelle und jeden Patch die jeweilige Lizenz und die Rechte zur Weitergabe. **Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Lade nur eigene bzw. zur Veröffentlichung freigegebene Quelldateien, Grafiken und Patches hoch.
+Die genannten Community-Projekte sind nicht offiziell mit Nintendo, Game Freak oder The Pokémon Company verbunden. Für jede Quelle und jedes Asset sind Lizenz, Herkunft und Nutzungsrechte separat zu beachten.
 
-## Klonen
-
-Submodule beim Klonen mit abrufen:
+## Submodule abrufen
 
 ```sh
 git clone --recurse-submodules <URL-dieses-Repositories>
 ```
 
-Für einen bereits vorhandenen Klon:
+Für einen vorhandenen Klon:
 
 ```sh
 git submodule update --init --recursive
 ```
 
-Submodule sind auf konkrete Commits gepinnt. Aktualisiere sie nicht beiläufig: Änderungen am Gitlink müssen geprüft und bewusst committet werden.
+Submodule sind auf konkrete Commits gepinnt. Aktualisiere sie nicht beiläufig; Gitlink-Änderungen müssen geprüft und bewusst committet werden.
 
 ## PixelFX lokal verwenden
 
-Die PixelFX-Werkzeuge werden im Submodule-Verzeichnis ausgeführt. Node.js 18 oder neuer wird laut Agenten-Anleitung benötigt; `ffmpeg` ist für GIF-/MP4-Vorschauen optional.
+PixelFX-Tools werden im Submodule-Verzeichnis ausgeführt. Laut Agenten-Anleitung ist Node.js 18 oder neuer erforderlich; `ffmpeg` ist für GIF-/MP4-Vorschauen optional.
 
 ```sh
 cd sources/pixelfx
@@ -71,4 +65,4 @@ node tools/check.mjs fire/torch
 node tools/render.mjs ice/frost-nova --sheet
 ```
 
-PixelFX-Ausgaben entstehen im Submodule unter `records/`. Das Submodule ist Referenzmaterial: eigene Änderungen dort nicht als Änderung dieses Haupt-Repositories behandeln. Für den projektspezifischen Ablauf siehe [PixelFX-Skill](.agents/skills/pixelfx/SKILL.md).
+PixelFX erzeugt Effekte in Code und kann daraus Vorschauen/Sprite-Sheets rendern. Für HeartGold müssen geeignete Effekte ausgewählt, stilistisch angepasst und in das Spielsystem portiert bzw. eingebunden werden. Automatische Pokémon-Move-Zuordnung, fertige HeartGold-Animationen und GBA-Integration sind damit nicht gegeben. Render-Ergebnisse bleiben im vorgesehenen `records/`-Ordner des Submodules und werden nicht als fertige Spielintegration ausgegeben.
