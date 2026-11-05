@@ -1,0 +1,44 @@
+name: Visuelle QA
+description: Einen konkreten visuellen Mangel oder eine begründete Prüfentscheidung dokumentieren.
+title: "[Visual QA] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keine vollständigen ROMs oder Spielstände anhängen. Belege nur mit zulässigen Screenshots/Frames, Quellpfaden oder reproduzierbaren Schritten.
+  - type: input
+    id: target
+    attributes:
+      label: Move-, Animations- oder Asset-ID
+      description: Betroffene ID und ggf. Animationsfamilie.
+      placeholder: "z. B. Move-ID / data/battle_anim_scripts.s"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Spiel- und Quellversion
+      description: Version, Tag oder Commit; unbekannte Angaben als unbekannt kennzeichnen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Testfall / Reproduktionsschritte
+      description: Umgebung, Schritte, Seite/Ziel und Kampfmodus nennen.
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Beobachtung und Beleg
+      description: Konkrete sichtbare Beobachtung plus Quelle, Zeitstempel oder zulässiger Screenshot/Frame.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Erwartung, Priorität und nächster Schritt
+      description: Mangel, beibehaltene Animation oder Blocker; gewünschtes Ergebnis und Priorität.
+    validations:
+      required: true
