@@ -1,12 +1,13 @@
 # Projektstatus und nächste Schritte
 
-**Statusaufnahme:** 5. November 2026. Diese Datei beschreibt, was sich aus den versionierten Repository-Dateien belegen lässt; sie behauptet keine lokale Prüfung von ROMs, Videos, Builds oder Grafiken.
+**Statusaufnahme:** 5. November 2026. Diese Datei beschreibt, was sich aus den versionierten Repository-Dateien belegen lässt; sie behauptet keine lokale Prüfung von ROMs, Videos, Builds oder Grafiken. Projektsteuerung und Zuständigkeiten sind unter [KI-gestützte Projektleitung](PROJECT-MANAGEMENT.md) festgelegt.
 
 ## Kurzstatus
 
 | Bereich | Status | Beleg / offene Frage |
 | --- | --- | --- |
 | Projektziel und QA-Plan | Dokumentiert | `docs/TODO-SoulGold-1.3-Visual-QA.md` beschreibt Phasen und Abnahmekriterien. |
+| Projektsteuerung | Eingerichtet | `docs/PROJECT-MANAGEMENT.md` legt KI-/Eigentümerrollen, Prioritäten und Berichtsformat fest. |
 | PixelFX-Effekt-Checkliste | Angelegt, Prüfstatus offen | `docs/SoulGold-1.2-PixelFX-Effekt-Checkliste.md`; die Einträge sind als ungeprüft markiert. |
 | Referenz-Submodule | Eingerichtet | `sources/` und `.gitmodules`; Submodule auf gepinnte Commits. |
 | SoulGold v1.2 Arbeitsquelle | Nicht als Submodule eingerichtet | Der im QA-Plan genannte Quellstand ist nicht in `.gitmodules` aufgeführt. Verfügbarkeit und Prüfsumme sind noch zu verifizieren. |
@@ -66,4 +67,4 @@
 
 ## Nächster konkreter Schritt
 
-Zuerst die ZIP-Dateien und die SoulGold-Arbeitsbasis klären. Danach Gate 0 mit belegbaren Fakten abschließen und ein kleines visuelles QA-Beispiel vollständig durch Inventar, Bewertung, Prototyp-Entscheidung und Testnachweis führen.
+Zuerst die ZIP-Dateien und die SoulGold-Arbeitsbasis klären. Der Projektleiter übernimmt die Zerlegung und Dokumentation; vom Eigentümer wird nur Input benötigt, der nicht aus Repository/zugänglichen Quellen ermittelt werden kann. Danach Gate 0 mit belegbaren Fakten abschließen und ein kleines visuelles QA-Beispiel vollständig durch Inventar, Bewertung, Prototyp-Entscheidung und Testnachweis führen.
