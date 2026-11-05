@@ -1,4 +1,4 @@
-# Schutz für lokal zu prüfende oder generierte Dateien
+# Lokale Spieldaten und Prüfartefakte
 *.gba
 *.gbc
 *.gb
@@ -11,13 +11,13 @@
 *.bin
 *.zip
 
-# Bekannte projektbezogene Uploads (Ignore-Regeln entfernen keine bereits getrackten Dateien)
+# Bereits bekannte Projektdateien (Ignore-Regeln entfernen keine getrackten Dateien)
 /Pokemon - HeartGold Version (Europe).zip
 /decoded-20261105072839.bin
 /Pokemon - Emerald Version (U)(TrashMan).zip
 /soulgold-v1.2.zip
 
-# PixelFX gerenderte Vorschauen im Submodule
+# PixelFX-Vorschauen
 /sources/pixelfx/records/
 
 # Betriebssystem / Editor

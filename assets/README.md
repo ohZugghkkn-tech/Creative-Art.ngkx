@@ -1,16 +1,13 @@
-# Assets und priorisierte Uploads
+# Assets
 
-Die zwei zuletzt hochgeladenen Dateien sind gemäß Projektentscheidung die **höchste unmittelbare Projektpriorität**, aber derzeit ungeprüfte Eingaben:
+Nur eigene oder nachweislich freigegebene Arbeitsdateien ablegen. Herkunft, Lizenz/Rechte, Basisversion und Verwendungszweck dokumentieren.
 
-- `Pokemon - HeartGold Version (Europe).zip` — Commit-Vorschau zeigte eine Download-Fehlermeldung als Text; ein gültiges Archiv ist damit nicht belegt.
-- `decoded-20261105072839.bin` — Dateiformat, Herkunft und Inhalt sind anhand der Vorschau nicht zuverlässig bekannt.
+**Keine vollständigen kommerziellen Spiele, ROMs oder Spielstände hochladen.** Unbekannte Archive/Binärdateien nicht ausführen. Die aktuell priorisierten Uploads sind nicht geprüft und nicht als Arbeitsbasis bestätigt; siehe `docs/PROJECT-STATUS.md`.
 
-Diese Statusnotiz bedeutet weder Rechtefreigabe noch technische Eignung. Keine vollständigen kommerziellen Spiele, ROMs oder Saves hochladen oder weitergeben. Prüfe unbekannte Dateien ausschließlich lokal und isoliert; führe sie nicht aus. Für Arbeit bevorzugt zulässige HeartGold-Quelltexte, eigene Assets und erlaubte Patch-Dateien nutzen. Herkunft und Rechte zu jeder Datei dokumentieren.
-
-Zulässige eigene oder nachweislich freigegebene Arbeitsdateien können bei Bedarf so strukturiert werden:
+Mögliche Ablage für geprüfte Dateien:
 
 - `assets/source-art/` — eigene, editierbare Quelldateien;
 - `assets/exports/` — freigegebene Exporte, sofern nicht reproduzierbar generierbar;
-- `assets/patches/` — erlaubte Patch-Dateien mit dokumentierter Basisversion.
+- `assets/patches/` — erlaubte Patches mit dokumentierter Basisversion.
 
-Keine leeren Strukturordner oder ungeklärte Archive hinzufügen. Ignore-Regeln löschen oder enttracken keine Dateien, die bereits in der Git-Historie liegen.
+Keine leeren Strukturordner oder ungeklärten Archive hinzufügen. Ignore-Regeln entfernen keine bereits versionierten Dateien.
